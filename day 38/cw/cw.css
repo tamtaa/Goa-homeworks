@@ -1,0 +1,19 @@
+#red {
+  color: rgb(42, 155, 178);
+  font-size: 18px;
+}
+
+.green {
+  color: rgb(72, 32, 108);
+  font-size: 18px;
+}
+
+p {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+p:last-of-type {
+  color: red;
+  font-size: 18px;
+}
