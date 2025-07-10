@@ -1,0 +1,9 @@
+.image{
+    display: flex;
+
+}
+.image{
+    width: 25%;
+    height: auto;
+   border: 2px solid #6060ed;
+}
