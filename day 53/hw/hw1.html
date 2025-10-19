@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Table</title>
+  <style>
+    body {
+      background-color: #121826; /* მთლიანი გვერდის ფონი */
+      color: #fff; /* ტექსტი თეთრი */
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #1e293b; /* სვეტების სათაურის ფონი */
+      color: #38bdf8; /* ცისფერი ტექსტი */
+    }
+
+    /* მონაცვლეობითი ხაზები */
+    tr:nth-child(even) {
+      background-color: #1e293b;
+    }
+    tr:nth-child(odd) {
+      background-color: #0f172a;
+    }
+
+    /* კონკრეტულ ხაზებზე font-family და font-weight */
+    tr:nth-child(2) { font-family: Arial, sans-serif; font-weight: 400; }
+    tr:nth-child(3) { font-family: 'Times New Roman', serif; font-weight: 700; }
+    tr:nth-child(4) { font-family: Georgia, serif; font-weight: 300; }
+    tr:nth-child(5) { font-family: 'Courier New', monospace; font-weight: 600; }
+    tr:nth-child(6) { font-family: Verdana, sans-serif; font-weight: 500; }
+    tr:nth-child(7) { font-family: Tahoma, sans-serif; font-weight: 900; }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Sites</th>
+      <th>Views</th>
+      <th>Clicks</th>
+      <th>Average</th>
+    </tr>
+    <tr>
+      <td>Google</td>
+      <td>9518</td>
+      <td>6369</td>
+      <td>01:32:50</td>
+    </tr>
+    <tr>
+      <td>Twitter</td>
+      <td>7326</td>
+      <td>10497</td>
+      <td>00:51:22</td>
+    </tr>
+    <tr>
+      <td>Amazon</td>
+      <td>4162</td>
+      <td>5327</td>
+      <td>00:24:34</td>
+    </tr>
+    <tr>
+      <td>LinkedIn</td>
+      <td>3654</td>
+      <td>2961</td>
+      <td>00:12:10</td>
+    </tr>
+    <tr>
+      <td>CodePen</td>
+      <td>2002</td>
+      <td>4135</td>
+      <td>00:46:19</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>4623</td>
+      <td>3486</td>
+      <td>00:31:52</td>
+    </tr>
+  </table>
+</body>
+</html>
