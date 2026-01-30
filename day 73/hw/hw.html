@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 73 Animations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 1s linear;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    /* 4️⃣ ბარათი, რომელიც hover-ზე ბრუნდება */
+    .card {
+      width: 200px;
+      height: 150px;
+      background-color: #4caf50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      transition: transform 0.6s; /* transform-transition */
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    /* 5️⃣ ელემენტი რომელიც Y ღერძზე მოძრაობს მუდმივად */
+    .moving-box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: relative;
+      animation: moveY 2s infinite alternate linear;
+      margin-bottom: 30px;
+    }
+
+    @keyframes moveY {
+      0% { top: 0; }
+      100% { top: 200px; }
+    }
+
+    /* 6️⃣ body background color animation */
+    @keyframes bgChange {
+      0% { background-color: #ff9999; }
+      25% { background-color: #99ff99; }
+      50% { background-color: #9999ff; }
+      75% { background-color: #ffff99; }
+      100% { background-color: #ff99ff; }
+    }
+
+    /* 7️⃣ Progress ბარი */
+    .progress-container {
+      width: 100%;
+      background-color: #ddd;
+      height: 25px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #2196F3;
+      border-radius: 5px;
+      animation: progress 3s forwards; /* width: 0 → 100% */
+    }
+
+    @keyframes progress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    /* 8️⃣ ტექსტი მარცხნიდან ნელა შემოსრიალებით */
+    .slide-text {
+      display: inline-block;
+      transform: translateX(-100%);
+      opacity: 0;
+      animation: slideIn 2s forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>4) Hover Card</h2>
+  <div class="card">Hover me!</div>
+
+  <h2>5) Moving Box (Y axis)</h2>
+  <div class="moving-box"></div>
+
+  <h2>6) Body background animation (5s)</h2>
+  <!-- JS-ს მეშვეობით დავიწყებთ animation -->
+
+  <h2>7) Progress Bar</h2>
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+
+  <h2>8) Sliding Text</h2>
+  <p><span class="slide-text">Hello! I slide in from the left.</span></p>
+
+  <script>
+    // 1️⃣ რისთვის გამოიყენება ანიმაცია
+    console.log("Animation გამოიყენება ელემენტების მოძრაობისთვის, სილამაზისთვის, ყურადღების მიქცევისთვის და UI გამოცდილების გასაუმჯობესებლად.");
+
+    // 2️⃣ როგორ შევქმნათ ანიმაცია
+    console.log("ანიმაციას შეგვიძლია შევქმნათ CSS @keyframes-ის ან transform/transition-ის საშუალებით.");
+
+    // 3️⃣ @keyframes vs transform-transition
+    console.log("@keyframes საშუალებას გვაძლევს სრულ კომპლექსურ ანიმაციას ბევრ keyframe-ით, transform-transition გამოყენებულია მხოლოდ ერთი ცვლილების თანმიმდევრული ნელ-ნელა შესრულებისთვის.");
+
+    // 4️⃣ animation-ის თვისებები
+    console.log(`animation-name: ანიმაციის სახელი
+animation-duration: ხანგრძლივობა
+animation-timing-function: დროის ფუნქცია (linear, ease, ease-in, ease-out)
+animation-delay: დასაცავი დრო ანიმაციის დაწყებამდე
+animation-iteration-count: რამდენჯერ განმეორდება
+animation-direction: normal, reverse, alternate
+animation-fill-mode: forwards/backwards/both
+animation-play-state: paused/running`);
+
+    // 6️⃣ body background animation 5s
+    document.body.style.animation = "bgChange 5s linear infinite";
+
+  </script>
+
+</body>
+</html>

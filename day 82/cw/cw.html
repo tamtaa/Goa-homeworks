@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results Summary Component</title>
+
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      max-width: 680px;
+      border-radius: 20px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .left {
+      background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      text-align: center;
+      padding: 50px 30px;
+      color: #fff;
+    }
+
+    .left h2 {
+      font-size: 22px;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .score-circle {
+      background: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+      );
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .score-circle h1 {
+      font-size: 55px;
+      font-weight: 800;
+    }
+
+    .score-circle p {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-top: -5px;
+    }
+
+    .left h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 15px;
+      opacity: 0.9;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    .right {
+      padding: 40px 35px;
+    }
+
+    .right h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: hsl(224, 30%, 27%);
+    }
+
+    .summary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .item span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .reaction {
+      background: hsl(0, 100%, 98%);
+      color: hsl(0, 100%, 67%);
+    }
+
+    .memory {
+      background: hsl(39, 100%, 96%);
+      color: hsl(39, 100%, 56%);
+    }
+
+    .verbal {
+      background: hsl(166, 100%, 96%);
+      color: hsl(166, 100%, 37%);
+    }
+
+    .visual {
+      background: hsl(234, 85%, 96%);
+      color: hsl(234, 85%, 45%);
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: hsl(224, 30%, 27%);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: hsl(241, 81%, 54%);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 0;
+      }
+
+      .card {
+        grid-template-columns: 1fr;
+        border-radius: 0;
+      }
+
+      .left {
+        padding: 35px 20px;
+      }
+
+      .score-circle {
+        width: 120px;
+        height: 120px;
+      }
+
+      .description {
+        font-size: 13px;
+      }
+
+      .right {
+        padding: 25px 20px;
+      }
+
+      .item {
+        padding: 12px;
+      }
+
+      button {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    
+    <div class="left">
+      <h2>Your Result</h2>
+
+      <div class="score-circle">
+        <h1>76</h1>
+        <p>of 100</p>
+      </div>
+
+      <h3>Great</h3>
+      <p class="description">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+
+    <div class="right">
+      <h2>Summary</h2>
+
+      <div class="summary-list">
+
+        <div class="item reaction">
+          <span>
+            <img src="file:///C:/Users/Usuario/AppData/Local/Temp/f7a2a4ab-8608-421f-a913-3ccb7970e885_results-summary-component-main.zip.885/results-summary-component-main/assets/images/icon-memory.svg" width="20">
+            Reaction
+          </span>
+          <p>80 / 100</p>
+        </div>
+
+        <div class="item memory">
+          <span>
+            <img src="file:///C:/Users/Usuario/AppData/Local/Temp/17d48010-323c-49b0-beb3-b7d28c2fc847_results-summary-component-main.zip.847/results-summary-component-main/assets/images/icon-reaction.svg" width="20">
+            Memory
+          </span>
+          <p>92 / 100</p>
+        </div>
+
+        <div class="item verbal">
+          <span>
+            <img src="file:///C:/Users/Usuario/AppData/Local/Temp/b5679000-76df-43e6-8261-e2bf074168e4_results-summary-component-main.zip.8e4/results-summary-component-main/assets/images/icon-verbal.svg" width="20">
+            Verbal
+          </span>
+          <p>61 / 100</p>
+        </div>
+
+        <div class="item visual">
+          <span>
+            <img src="file:///C:/Users/Usuario/AppData/Local/Temp/e9ade01b-88d7-4857-baf4-2024c86f4433_results-summary-component-main.zip.433/results-summary-component-main/assets/images/icon-visual.svg" width="20">
+            Visual
+          </span>
+          <p>72 / 100</p>
+        </div>
+
+      </div>
+
+      <button>Continue</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

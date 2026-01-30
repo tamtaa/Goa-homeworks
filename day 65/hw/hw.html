@@ -1,0 +1,66 @@
+<!-- 1) overflow გამოიყენება იმის სამართავად, თუ რა მოხდეს, როცა კონტენტის ზომა (ტექსტი, სურათი და ა.შ.)
+ უფრო დიდია, ვიდრე ელემენტის განსაზღვრული ზომა (width / height).
+ანუ overflow განსაზღვრავს როგორ გამოჩნდეს ზედმეტი კონტენტი.
+
+2) overflow: hidden; ზედმეტი კონტენტი იმალება, არ ჩანს და არც scrollbar ჩნდება.
+
+3) overflow: auto; თუ კონტენტი მეტია ელემენტის ზომაზე → ავტომატურად დაემატება scrollbar (თუ საჭიროა).
+
+4) overflow: scroll; ყოველთვის გამოაჩენს scrollbar-ს — მაშინაც კი, თუ კონტენტი ეტევა.
+
+5) overflow: visible; კონტენტი არ იჭრება და უბრალოდ გადმოდის კონტეინერის გარეთ. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overflow Examples</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 10px;
+    }
+
+    .hidden {
+      overflow: hidden;
+    }
+
+    .auto {
+      overflow: auto;
+    }
+
+    .scroll {
+      overflow: scroll;
+    }
+
+    .visible {
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <h2>overflow: hidden;</h2>
+  <div class="box hidden">
+    ეს არის ძალიან გრძელი ტექსტი, რომელიც არ ეტევა ბლოკში და ამიტომ ზედმეტი ნაწილი დაიმალება.
+  </div>
+
+  <h2>overflow: auto;</h2>
+  <div class="box auto">
+    ეს არის ძალიან გრძელი ტექსტი, რომელიც არ ეტევა ბლოკში და ავტომატურად დაემატება scrollbar მხოლოდ მაშინ, როცა საჭიროა.
+  </div>
+
+  <h2>overflow: scroll;</h2>
+  <div class="box scroll">
+    ეს არის ძალიან გრძელი ტექსტი, რომელიც არ ეტევა ბლოკში, scrollbar კი ყოველთვის გამოჩნდება, მიუხედავად იმისა საჭიროა თუ არა.
+  </div>
+
+  <h2>overflow: visible;</h2>
+  <div class="box visible">
+    ეს არის ძალიან გრძელი ტექსტი, რომელიც არ ეტევა ბლოკში და უბრალოდ გადმოიღვრება კონტეინერის გარეთ.
+  </div>
+</body>
+</html>

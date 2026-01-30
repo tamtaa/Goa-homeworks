@@ -1,0 +1,9 @@
+input::placeholder {
+color: rgb(106, 103, 103);
+font-style: italic;
+}
+input:focus{
+    border: 2px solid blueviolet;
+    outline: none;
+    background-color: aliceblue;
+}

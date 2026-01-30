@@ -1,0 +1,49 @@
+<!-- 5) შექმენი ორი ბლოკი.
+პირველს მიეცი width: 100vw; height: 50vh;.
+მეორეს – width: 50vw; height: 100vh;.
+გადააჭიმე ბრაუზერი და დააკვირდი, როგორ იცვლება. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hw5.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    }
+
+    .box1 {
+      width: 100vw;     /* მთლიანი ფანჯრის სიგანე */
+      height: 50vh;     /* ფანჯრის სიმაღლის ნახევარი */
+    background: #4dabf7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    }
+
+    .box2 {
+      width: 50vw;      /* ფანჯრის სიგანის ნახევარი */
+      height: 100vh;    /* მთლიანი ფანჯრის სიმაღლე */
+    background: #63e6be;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    }
+    </style>
+<body>
+    <div class="box1">100vw x 50vh</div>
+    <div class="box2">50vw x 100vh</div>
+</body>
+</html>

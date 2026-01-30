@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mortgage Repayment Calculator</title>
+  <link rel="stylesheet" href="hw.css">
+</head>
+<body>
+
+  <main class="card">
+    <section class="form-section">
+      <h1>Mortgage Calculator</h1>
+
+      <form id="form">
+        <div class="field">
+          <label>Mortgage Amount</label>
+          <div class="input-wrapper">
+            <span>£</span>
+            <input type="number" id="amount">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Mortgage Term</label>
+            <div class="input-wrapper">
+              <input type="number" id="years">
+              <span>years</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Interest Rate</label>
+            <div class="input-wrapper">
+              <input type="number" id="rate">
+              <span>%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Mortgage Type</label>
+          <div class="radio">
+            <input type="radio" name="type" checked>
+            <span>Repayment</span>
+          </div>
+          <div class="radio">
+            <input type="radio" name="type">
+            <span>Interest Only</span>
+          </div>
+        </div>
+
+        <button type="submit">Calculate Repayments</button>
+        <p class="error" id="error"></p>
+      </form>
+    </section>
+
+    <section class="result-section">
+      <h2>Your results</h2>
+      <p class="desc">
+        Your results are shown below based on the information you provided.
+        To adjust the results, edit the form and click “calculate repayments” again.
+      </p>
+
+      <div class="result-box">
+        <p class="label">Your monthly repayments</p>
+        <p class="monthly">£<span id="monthly">0.00</span></p>
+
+        <hr>
+
+        <p class="label">Total you'll repay over the term</p>
+        <p class="total">£<span id="total">0.00</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="hw.js"></script>
+</body>
+</html>

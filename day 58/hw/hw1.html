@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1) რა არის display? -->
+  <h2>1. რა არის display?</h2>
+  <p>
+    <!-- "display" არის CSS-ის property, რომელიც განსაზღვრავს როგორ გამოჩნდება ელემენტი გვერდზე. -->
+    "display" განსაზღვრავს როგორ გამოჩნდება ელემენტი: block, inline, flex, grid და სხვ.
+  </p>
+
+  <!-- 2) block და inline ახსნა -->
+  <h2>2. block და inline ახსნა</h2>
+  <p>
+    <!-- block: იკავებს მთელ ხაზს, ახალ ხაზზე გადადის, შეიძლება ჰქონდეს width და height. -->
+    <!-- inline: იკავებს მხოლოდ შიგთავსის ადგილს, ახალ ხაზზე არ გადადის, width და height არ მუშაობს. -->
+    Block → ახალ ხაზზე გადადის. Inline → მხოლოდ ტექსტის ზომას იკავებს.
+  </p>
+
+  <!-- 3) განსხვავება block და inline -->
+  <h2>3. block და inline შორის განსხვავება</h2>
+  <ul>
+    <!-- block და inline-ის განსხვავება -->
+    <li>Block იწყებს ახალ ხაზს, Inline — არა</li>
+    <li>Block-ს შეიძლება ჰქონდეს width/height, Inline-ს — არა</li>
+    <li>Block იკავებს მთელ ხაზს, Inline — მხოლოდ შიგთავსის ადგილს</li>
+  </ul>
+
+  <!-- 4) Block მაგალითები -->
+  <h2>4. 5 მაგალითი display:block-ზე</h2>
+  <div style="display:block; background:lightblue; margin:5px; padding:5px;">
+    DIV ყოველთვის block-ია
+  </div>
+  <p style="display:block; background:lightcoral; margin:5px; padding:5px;">
+    Paragraph (P) ყოველთვის block-ია
+  </p>
+  <header style="display:block; background:lightgreen; margin:5px; padding:5px;">
+    HEADER block-ია
+  </header>
+  <section style="display:block; background:khaki; margin:5px; padding:5px;">
+    SECTION block-ია
+  </section>
+  <footer style="display:block; background:plum; margin:5px; padding:5px;">
+    FOOTER block-ია
+  </footer>
+
+  <!-- 5) Inline მაგალითები -->
+  <h2>5.მაგალითი display:inline-ზე</h2>
+  <a href="#" style="display:inline; background:lightcoral; margin:5px; padding:5px;">
+    A (ბმული) inline-ია
+  </a>
+  <strong style="display:inline; background:lightgreen; margin:5px; padding:5px;">
+    STRONG inline-ია
+  </strong>
+</body>
+</html>

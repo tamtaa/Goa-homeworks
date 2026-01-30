@@ -1,0 +1,32 @@
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-width: 400px;
+} 
+
+.my-list {
+  list-style-type: square;   
+  padding-left: 20px;
+}
+
+.my-list li {
+  background: #f8fafc;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.my-list li:hover {
+  background: #dbeafe;
+  transform: translateX(5px);
+}
+
+.my-list li::marker {
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: bold;
+}

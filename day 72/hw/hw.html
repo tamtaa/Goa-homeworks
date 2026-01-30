@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 72 JS DOM</title>
+  <style>
+    div, section, main {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1) id -->
+  <div id="greeting"></div>
+
+  <!-- 2) div for querySelector -->
+  <div class="header"></div>
+
+  <!-- 3) class element -->
+  <div class="content"></div>
+
+  <!-- 4) section -->
+  <section class="list-section"></section>
+
+  <!-- 5) empty div for image -->
+  <div id="image-container"></div>
+
+  <!-- 6) element for += -->
+  <div id="append-text">Original text. </div>
+
+  <!-- 7) element for replacement -->
+  <div id="replace-content">Old content</div>
+
+  <!-- 8) main element -->
+  <main></main>
+
+  <script>
+    // 1️⃣ getElementById + innerHTML
+    const greeting = document.getElementById("greeting");
+    greeting.innerHTML = "Hello, World!";
+
+    // 2️⃣ querySelector + <h2>
+    const headerDiv = document.querySelector(".header");
+    headerDiv.innerHTML = "<h2>My Page Title</h2>";
+
+    // 3️⃣ getElementsByClassName + <p>
+    const contentDivs = document.getElementsByClassName("content");
+    if(contentDivs.length > 0){
+      contentDivs[0].innerHTML = "<p>This is a paragraph</p>";
+    }
+
+    // 4️⃣ querySelector + new HTML structure
+    const listSection = document.querySelector(".list-section");
+    listSection.innerHTML = `
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+      </ul>
+    `;
+
+    // 5️⃣ getElementById + image
+    const imageContainer = document.getElementById("image-container");
+    imageContainer.innerHTML = '<img src="https://via.placeholder.com/150" alt="Placeholder Image">';
+
+    // 6️⃣ querySelector + append using +=
+    const appendTextDiv = document.querySelector("#append-text");
+    appendTextDiv.innerHTML += "Appended text!";
+
+    // 7️⃣ getElementById + replace content
+    const replaceDiv = document.getElementById("replace-content");
+    replaceDiv.innerHTML = "New content updated!";
+
+    // 8️⃣ querySelector + add multiple HTML blocks inside main
+    const mainTag = document.querySelector("main");
+    mainTag.innerHTML = `
+      <div class="block1">Block 1 content</div>
+      <div class="block2">
+        <p>Some paragraph inside block 2</p>
+      </div>
+      <div class="block3">Block 3 content</div>
+    `;
+  </script>
+
+</body>
+</html>

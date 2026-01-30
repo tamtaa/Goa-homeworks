@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: hsl(225, 100%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 85%;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: hsl(223, 47%, 23%);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: .95rem;
+  color: hsl(224, 23%, 55%);
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+}
+
+.plan {
+  background-color: hsl(225, 100%, 98%);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.song {
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+}
+
+.song img{
+  width: 40px;
+}
+
+.plan-name {
+  font-weight: 700;
+  color: hsl(223, 47%, 23%);
+  font-size: 1rem;
+}
+
+.plan-price {
+  color: hsl(224, 23%, 55%);
+  font-size: .92rem;
+}
+
+.plan-change {
+  background: none;
+  border: none;
+  font-size: .92rem;
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.plan-change:hover {
+  color: hsl(245, 65%, 45%);
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: .95rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-bottom: .7rem;
+}
+
+.btn-primary {
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: hsl(245, 65%, 45%);
+}
+
+.btn-cancel {
+  background: none;
+  color: hsl(224, 23%, 55%);
+}
+
+.btn-cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    max-width: 400px;
+  }
+}

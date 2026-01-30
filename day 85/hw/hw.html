@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asynchronous Tasks</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* ---------- TASK 2 ---------- */
+    .box {
+      width: 100px;
+      height: 100px;
+      background: rgb(91, 61, 61);
+      margin: 10px 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    .banner {
+      background: orange;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ---------- TASK 1 ---------- -->
+  <h3>1) ტექსტის შეცვლა 2 წამში</h3>
+  <p id="text">hello </p>
+  <button id="tteexxtt">daawkape aq!</button>
+
+  <hr>
+  <!-- ---------- TASK 2 ---------- -->
+  <h3>2) div-ების გამოჩენა ყოველ 1 წამში</h3>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <hr>
+
+  <!-- ---------- TASK 3 ---------- -->
+  <h3>3) Input → Span 3 წამში</h3>
+  <input type="text" id="inputText" placeholder="ჩაწერე ტექსტი" />
+  <button id="sendBtn">გადაცემა</button>
+  <p>შედეგი: <span id="result"></span></p>
+
+  <hr>
+
+  <!-- ---------- TASK 4 ---------- -->
+  <h3>4) Banner გაქრობა 5 წამში</h3>
+  <div class="banner" id="banner">
+    <p>ეს არის ბანერი</p>
+    <button id="closeBanner">დახურვა</button>
+  </div>
+<script src="hw.js"></script>
+  <!-- <script>
+    /* ---------- TASK 1 ---------- */
+    const changeTextBtn = document.getElementById("changeTextBtn");
+    const text = document.getElementById("text");
+
+    changeTextBtn.addEventListener("click", () => {
+      setTimeout(() => {
+        text.textContent = "ტექსტი შეიცვალა 2 წამში";
+      }, 2000);
+    });
+
+    /* ---------- TASK 2 ---------- */
+    const boxes = document.querySelectorAll(".box");
+    let index = 0;
+
+    const interval = setInterval(() => {
+      if (index < boxes.length) {
+        boxes[index].classList.add("visible");
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    /* ---------- TASK 3 ---------- */
+    const input = document.getElementById("inputText");
+    const sendBtn = document.getElementById("sendBtn");
+    const result = document.getElementById("result");
+
+    sendBtn.addEventListener("click", () => {
+      const value = input.value;
+
+      setTimeout(() => {
+        result.textContent = value;
+      }, 3000);
+    });
+
+    /* ---------- TASK 4 ---------- */
+    const banner = document.getElementById("banner");
+    const closeBanner = document.getElementById("closeBanner");
+
+    const bannerTimeout = setTimeout(() => {
+      banner.classList.add("hidden");
+    }, 5000);
+
+    closeBanner.addEventListener("click", () => {
+      banner.classList.add("hidden");
+      clearTimeout(bannerTimeout);
+    });
+  </script> -->
+
+</body>
+</html>

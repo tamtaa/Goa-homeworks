@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary Component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: hsl(225, 100%, 94%);
+    }
+
+    /* Card Container */
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      padding: 2rem;
+    }
+
+    .card-content h1 {
+      color: hsl(223, 47%, 23%);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-content p {
+      color: hsl(224, 23%, 55%);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    /* Plan Details */
+    .plan {
+      display: flex;
+      align-items: center;
+      background: hsl(225, 100%, 98%);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      justify-content: space-between;
+    }
+
+    .plan-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .plan-info img {
+      width: 50px;
+      margin-right: 1rem;
+    }
+
+    .plan-info .plan-text {
+      text-align: left;
+    }
+
+    .plan-text .plan-name {
+      font-weight: 700;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .plan-text .plan-price {
+      color: hsl(224, 23%, 55%);
+      font-size: 0.9rem;
+    }
+
+    .change-plan {
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .change-plan:hover {
+      color: hsl(223, 47%, 23%);
+    }
+
+    /* Buttons */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-pricing {
+      background: hsl(245, 75%, 52%);
+      color: white;
+    }
+
+    .btn-pricing:hover {
+      background: hsl(245, 65%, 45%);
+    }
+
+    .btn-cancel {
+      background: none;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .btn-cancel:hover {
+      color: hsl(223, 47%, 23%);
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .card {
+        max-width: 450px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.ibb.co/8gkL3qD/illustration-hero.png" alt="Hero Image">
+    <div class="card-content">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+
+      <div class="plan">
+        <div class="plan-info">
+          <img src="https://i.ibb.co/9hqzvYc/icon-music.png" alt="Music Icon">
+          <div class="plan-text">
+            <div class="plan-name" id="planName">Annual Plan</div>
+            <div class="plan-price" id="planPrice">$59.99/year</div>
+          </div>
+        </div>
+        <div class="change-plan" id="changePlan">Change</div>
+      </div>
+
+      <button class="btn btn-pricing">Proceed to Payment</button>
+      <button class="btn btn-cancel">Cancel Order</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for changing plan
+    const changeBtn = document.getElementById('changePlan');
+    const planName = document.getElementById('planName');
+    const planPrice = document.getElementById('planPrice');
+
+    // Flag to track current plan
+    let isAnnual = true;
+
+    changeBtn.addEventListener('click', () => {
+      if (isAnnual) {
+        planName.textContent = "Monthly Plan";
+        planPrice.textContent = "$5.99/month";
+      } else {
+        planName.textContent = "Annual Plan";
+        planPrice.textContent = "$59.99/year";
+      }
+      isAnnual = !isAnnual;
+    });
+  </script>
+</body>
+</html>

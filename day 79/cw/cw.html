@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Component with Sign Up Form</title>
+    <link rel="stylesheet" href="cw.css" />
+</head>
+<body>
+
+  <main class="container">
+    <section class="left">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials
+        is great, but understanding how developers think is invaluable.
+      </p>
+    </section>
+
+    <section class="right">
+
+      <div class="trial-box">
+        <strong>Try it free 7 days</strong> then $20/mo thereafter
+      </div>
+
+      <form id="form" class="form">
+
+        <div class="input-group">
+          <input type="text" id="firstName" placeholder="First Name" />
+          <img class="error-icon" src="images/icon-error.svg" alt="">
+          <small>First Name cannot be empty</small>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="lastName" placeholder="Last Name" />
+          <img class="error-icon" src="images/icon-error.svg" alt="">
+          <small>Last Name cannot be empty</small>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email Address" />
+          <img class="error-icon" src="images/icon-error.svg" alt="">
+          <small>Looks like this is not an email</small>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" />
+          <img class="error-icon" src="images/icon-error.svg" alt="">
+          <small>Password cannot be empty</small>
+        </div>
+
+        <button class="btn" type="submit">CLAIM YOUR FREE TRIAL</button>
+
+        <p class="terms">
+          By clicking the button, you are agreeing to our
+          <span>Terms and Services</span>
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="cw.js"></script>
+
+</body>
+</html>
