@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: hsl(0, 0%, 98%);
+}
+
+header {
+  padding: 20px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: black;
+}
+
+.auth {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.login {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+
+.register {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 8px 18px;
+  border-radius: 10px;
+  color: black;
+}
+
+.register:hover {
+  background: black;
+  color: white;
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  background: white;
+  padding: 15px;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.hero-text p {
+  color: hsl(0, 0%, 41%);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-text button {
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background: hsl(0, 0%, 41%);
+}
+
+.hero-image img {
+  width: 400px;
+}
+
+

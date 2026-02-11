@@ -1,0 +1,163 @@
+body{
+  font-family: Arial;
+  margin:20px;
+}
+
+/* საერთო box */
+.box{
+  width:80px;
+  height:80px;
+  background:blue;
+}
+
+/* 1 */
+.container1{
+  display:flex;
+  gap:10px;
+}
+
+/* 2 */
+.container2{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* 3 */
+.container3{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:200px;
+  border:2px solid black;
+  gap:10px;
+}
+
+/* 4 */
+.container4{
+  display:flex;
+  justify-content:space-between;
+}
+
+/* 5 */
+.cards{
+  display:flex;
+  justify-content:space-around;
+}
+
+.card{
+  width:150px;
+  height:200px;
+  background:lightgray;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* 6 */
+.navbar ul{
+  display:flex;
+  justify-content:flex-end;
+  list-style:none;
+  gap:20px;
+}
+
+/* 7 */
+.wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.wrap-box{
+  width:100px;
+  height:80px;
+  background:orange;
+}
+
+/* 8 */
+.relative-box{
+  width:100px;
+  height:100px;
+  background:red;
+  position:relative;
+  top:20px;
+  left:40px;
+}
+
+/* 9 */
+.parent{
+  width:200px;
+  height:200px;
+  background:lightblue;
+  position:relative;
+}
+
+.child{
+  width:50px;
+  height:50px;
+  background:darkred;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+/* 10 */
+.fixed-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:10px;
+}
+
+/* 11 */
+.header{
+  position:sticky;
+  top:0;
+  background:yellow;
+  padding:15px;
+}
+
+.space{
+  height:400px;
+}
+
+/* 12 */
+.z1{
+  width:150px;
+  height:150px;
+  background:blue;
+  position:absolute;
+  z-index:1;
+}
+
+.z2{
+  width:150px;
+  height:150px;
+  background:red;
+  position:absolute;
+  top:50px;
+  left:50px;
+  z-index:2;
+}
+
+/* 13 */
+.grad1{
+  width:150px;
+  height:150px;
+  background:linear-gradient(red, blue);
+}
+
+/* 14 */
+.grad2{
+  width:150px;
+  height:150px;
+  background:linear-gradient(to right, red, blue);
+}
+
+/* 15 */
+.grad3{
+  width:150px;
+  height:150px;
+  background:linear-gradient(to right, red, yellow, green);
+}
