@@ -75,9 +75,9 @@ function showCourses(courses) {
     { lessons: thirdLessons = 0 }
   ] = courses;
 
-  console.log("First Course:", firstTitle, firstLessons);
-  console.log("Second Course:", secondCourseName);
-  console.log("Third Course Lessons:", thirdLessons);
+  console.log( firstTitle, firstLessons);
+  console.log(secondCourseName);
+  console.log(thirdLessons);
 }
 
 showCourses([
@@ -156,6 +156,7 @@ let a = 1;
 let b = 2;
 let c = 3;
 [a, c] = [c, a];
+
 console.log(a);
 console.log(b);
 console.log(c);

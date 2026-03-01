@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <!-- 1) შექმენი პროფილის ბარათი (profile card) რომელსაც ექნება რბილი shadow და სრულად მომრგვალებული პროფილის სურათი. -->
+    <div class="max-w-sm mx-auto bg-pink-100 rounded-2xl shadow-xl p-6 text-center">
+        <img src="Screenshot_4-1-2026_215034_.jpeg"class="w-24 h-24 mx-auto rounded-full mb-4 shadow-md">
+        <h2 class="text-xl font-bold">Tamta</h2>
+        <p class="text-gray-500">Frontend Developer</p>
+    </div>
+
+    <!-- 2) გააკეთე gradient ღილაკი, რომელიც hover-ზე ოდნავ იზრდება ზომაში და ფერები მსუბუქად იცვლება. დაამატე transition ეფექტი. -->
+
+      
+    
+    <div class="text-center">
+        <button class="px-6 py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 
+        transform hover:scale-105 transition duration-300 shadow-lg">Gradient Button</button>
+    </div>
+
+    <!-- 3) შექმენი 3 ბარათის grid განლაგება, სადაც შუა ბარათს ექნება უფრო დიდი shadow ვიდრე დანარჩენებს. -->    
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-pink-100 p-6 rounded-xl shadow-md text-center">1</div>
+        <div class="bg-blue-100 p-6 rounded-xl shadow-2xl text-center">2</div>
+        <div class="bg-purple-100 p-6 rounded-xl shadow-md text-center">3</div>
+    </div>
+    <!-- 4) გააკეთე flex ნავიგაცია (navbar), სადაც ლინკები ჰორიზონტალურად არის განლაგებული და hover-ზე ქვედა ხაზით ან ფერის ცვლილებით რეაგირებს. -->
+    <nav class="flex justify-center gap-8 bg-white p-4 rounded-xl shadow-md">
+        <a href="#" class="hover:text-blue-500 hover:border-b-2 border-blue-500 transition">Home</a>
+        <a href="#" class="hover:text-blue-500 hover:border-b-2 border-blue-500 transition">About</a>
+        <a href="#" class="hover:text-blue-500 hover:border-b-2 border-blue-500 transition">Contact</a>
+    </nav>
+
+    <!-- 5) შექმენი ბლოკი rounded კუთხეებით და ძლიერი shadow-ით, რომელიც hover-ზე ოდნავ “იწევს ზემოთ” (translate ეფექტის გამოყენებით). -->
+     
+    <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl p-8 
+    transform hover:-translate-y-2 transition duration-300 text-center">hello world</div>
+    <!-- 6) გააკეთე responsive grid გალერეა 8 სურათით: მობილურზე — 2 სვეტი ტაბლეტზე — 3 სვეტი დიდ ეკრანზე — 4 სვეტი -->
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+    </div>
+    <!-- 7) შექმენი ღილაკების ჯგუფი flex-ის გამოყენებით, სადაც ღილაკები თანაბრად ნაწილდება სივრცეში და პატარა ეკრანზე ვერტიკალურად ეწყობა. -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-between">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">One</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Two</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Three</button>
+    </div>
+
+    <!-- 8) გააკეთე gradient ფონის მქონე სექცია, სადაც ტექსტი ცენტრშია (flex-ის გამოყენებით) და აქვს მსუბუქი shadow ტექსტზე. -->
+    
+    <section class="h-40 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-pink-500 rounded-2xl shadow-xl">
+        <h2 class="text-white text-2xl font-bold drop-shadow-lg">hello world</h2>
+    </section>
+
+
+    <!-- 9) შექმენი ბარათების grid, სადაც თითოეულ ბარათს აქვს rounded ზედა კუთხეები, shadow და hover-ზე ჩრდილის გაზრდა transition-ით. -->
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-t-2xl p-6 shadow-md hover:shadow-2xl transition duration-300">1</div>
+        <div class="bg-white rounded-t-2xl p-6 shadow-md hover:shadow-2xl transition duration-300">2</div>
+        <div class="bg-white rounded-t-2xl p-6 shadow-md hover:shadow-2xl transition duration-300">3</div>  
+    </div>
+    <!-- 10) გააკეთე responsive flex layout, სადაც დესკტოპზე ტექსტი და სურათი გვერდიგვერდაა, ხოლო მობილურზე სურათი ტექსტის ზემოთ გადადის. -->
+
+    <div class="flex flex-col md:flex-row items-center gap-6">
+        <img src="Screenshot_4-1-2026_215034_.jpeg" class="rounded-xl shadow-md">
+        <div>
+            <h2 class="text-xl font-bold mb-2">hello world</h2>
+            <p class="text-gray-600">helllllo world</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
