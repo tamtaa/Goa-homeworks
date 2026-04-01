@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 92</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- clamp გამოყენებისთვის -->
+  <style>
+    .fluid-text {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-10 space-y-10">
+
+  <!-- 1)  -->
+  <div class="group w-72 bg-white rounded-xl shadow overflow-hidden">
+    <div class="overflow-hidden">
+      <!-- group-hover → სურათი იზრდება -->
+      <img src="https://via.placeholder.com/300"
+           class="w-full transition duration-300 group-hover:scale-110">
+    </div>
+    <div class="p-4">
+      <!-- group-hover → ტექსტის ფერი იცვლება -->
+      <h2 class="text-xl font-bold transition group-hover:text-blue-500">
+        Card Title
+      </h2>
+      <p class="text-gray-500">Simple text</p>
+    </div>
+  </div>
+
+  <!-- 2)  -->
+  <button class="group flex items-center gap-2 bg-gray-200 px-5 py-2 rounded-lg transition">
+    <!-- ტექსტი მუქდება -->
+    <span class="transition group-hover:text-black text-gray-600">
+      Click me
+    </span>
+    <!-- icon მარჯვნივ მიდის -->
+    <span class="transition transform group-hover:translate-x-1">
+      ->
+    </span>
+  </button>
+
+  <!-- 3)  -->
+  <div class="w-72">
+    <input type="text" placeholder="Enter text"
+           class="peer w-full border p-2 rounded outline-none">
+    
+    <p class="text-red-500 text-sm mt-1 hidden peer-placeholder-shown:block">
+      Field is required
+    </p>
+  </div>
+
+  <!-- 4)  -->
+  <div>
+    <input type="checkbox" id="check" class="peer hidden">
+    
+    <label for="check"
+      class="cursor-pointer text-gray-600 peer-checked:text-green-500 peer-checked:font-bold">
+      Accept terms
+    </label>
+  </div>
+
+  <!-- 5)  -->
+  <h1 class="fluid-text font-bold">
+    Responsive Title
+  </h1>
+
+  <!-- 6)  -->
+  <button class="px-6 py-2 bg-purple-500 text-white rounded-lg
+                 hover:ring-4 hover:ring-purple-300 transition">
+    Hover me
+  </button>
+
+  <!-- 7)  -->
+  <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory p-4 bg-white rounded-xl">
+    
+    <img src="https://via.placeholder.com/200"
+         class="snap-center shrink-0 w-52 h-32 rounded-lg">
+
+    <img src="https://via.placeholder.com/200"
+         class="snap-center shrink-0 w-52 h-32 rounded-lg">
+
+    <img src="https://via.placeholder.com/200"
+         class="snap-center shrink-0 w-52 h-32 rounded-lg">
+  </div>
+
+  <!-- 8) -->
+  <div class="w-72 bg-white p-4 rounded-xl shadow">
+    <p class="line-clamp-3 text-gray-600">
+        zsbenlfvnz\/js;di\bdv\szkjh\ndzvxjfzdjfxvcjfddjnfdkmvbjfhfnghurfdhfenjfuvcijksjrfviocjkaenzdcvui
+        zdfvj,edfhljzjkxvbingfvbujfnxvhujfnxjvnzjbn\jsj \ndjiz\nvkjzd\ndfzdjh\snmvfbkjn\mzvj
+        zsfkodjnfkgfjdnfjixhznjdfxxhznzjjkdfxhnjkzxfgjdmkzjdxfzdmkzjxuhnzmkerjignkmerjgjjnmkj
+        \jkszfdjikmzfgjsmkedxfjxdkmzfxgjkmfgnmkfgnmd,flfgfbjn\mkdlfogbjdmflgbojnmfgbojmfgjfjfmkzdxijznjmkxjjzklxjkxjgnkmzbxfidgjzkdmlxoikgdfb
+        dfgkbjzndfkxjdnzmkxjdzmkdflxbfjzkldxfijffkmzdxbijhb
+    </p>
+  </div>
+
+</body>
+</html>

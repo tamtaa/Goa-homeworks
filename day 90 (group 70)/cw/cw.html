@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- 1) შექმენი flex container 3 ელემენტით. ელემენტებს მიეცი განსხვავებული ფერები, padding და მრგვალი კიდეები. გამოიყენე flex alignment: space-between და center. -->
+ 
+
+<div class="flex justify-between items-center p-6 bg-gray-100">
+    <div class="bg-pink-400 p-4 rounded-xl text-white">hello</div>
+    <div class="bg-purple-400 p-4 rounded-xl text-white">hello</div>
+    <div class="bg-blue-400 p-4 rounded-xl text-white">hello</div>
+</div>
+<!-- 2) შექმენი grid layout 6 ბარათით. მობილურზე 1 სვეტი, პლანშეტზე (tablet) 2 სვეტი, desktop-ზე 3 სვეტი. დაამატე spacing და ჩრდილი (shadow). -->
+ 
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div class="bg-purple-300 p-6 shadow rounded-lg">hello</div>
+    <div class="bg-yellow-300 p-6 shadow rounded-lg">hello</div>
+    <div class="bg-pink-300 p-6 shadow rounded-lg">hello</div>
+    <div class="bg-blue-300 p-6 shadow rounded-lg">hello</div>
+    <div class="bg-green-300 p-6 shadow rounded-lg">hello</div>
+    <div class="bg-orange-300 p-6 shadow rounded-lg">hello</div>
+</div>
+
+<!-- 3) შექმენი responsive text positioning div-ებში. ტექსტი იყოს centered მობილურზე, მარცხნივ ტაბლეტზე და მარჯვნივ desktop-ზე. -->
+ <div class="p-6">
+  <p class="text-lg text-gray-800 text-center md:text-left lg:text-right">hello</p>
+</div>
+<!-- 4) გამოიყენე arbitrary values div-ის ზომებისთვის (width, height), padding, margin და background color. -->
+ <div class="w-[200px] h-[100px] p-[20px] m-[15px] bg-[] text-white flex items-center justify-center">hello</div>
+
+<!-- 5) შექმენი stacked elements with z-index 3 სხვადასხვა ზომის ელემენტით, სხვადასხვა ფერებით, ისე რომ ზედა ელემენტი დაფარავდეს ქვედა ელემენტებს. -->
+ <div class="relative w-[300px] h-[200px]">
+  <div class="absolute top-0 left-0 w-[100px] h-[100px] bg-red-400 z-10"></div>
+  <div class="absolute top-10 left-10 w-[150px] h-[150px] bg-green-400 z-20"></div>
+  <div class="absolute top-20 left-20 w-[200px] h-[200px] bg-blue-400 z-30"></div>
+</div>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 94 Full</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          borderRadius: {
+            xl2: "20px",
+          },
+          spacing: {
+            128: "32rem",
+          },
+          colors: {
+            primary: "#3b82f6",
+            secondary: "#10b981",
+            accent: "#f59e0b",
+            error: "#ef4444",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-gray-100 p-10 space-y-20">
+
+  <!-- 1) LOGIN FORM -->
+  <div class="max-w-md mx-auto bg-white shadow-lg rounded-xl2 p-8 space-y-4">
+    <h2 class="text-2xl font-bold text-center">Login</h2>
+
+    <input type="email" placeholder="Email"
+      class="w-full p-3 border rounded-xl2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+
+    <input type="password" placeholder="Password"
+      class="w-full p-3 border rounded-xl2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+
+    <button class="w-full bg-primary text-white p-3 rounded-xl2 hover:bg-blue-600 transition">
+      Login
+    </button>
+  </div>
+
+  <!-- 3) CARDS -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-xl2 shadow p-4 transform hover:scale-105 hover:shadow-xl transition">
+      <img src="https://via.placeholder.com/300" class="rounded-xl2 mb-3" />
+      <h3 class="font-bold text-lg">Card 1</h3>
+      <p>Some description text.</p>
+    </div>
+
+    <div class="bg-white rounded-xl2 shadow p-4 transform hover:scale-105 hover:shadow-xl transition">
+      <img src="https://via.placeholder.com/300" class="rounded-xl2 mb-3" />
+      <h3 class="font-bold text-lg">Card 2</h3>
+      <p>Some description text.</p>
+    </div>
+
+    <div class="bg-white rounded-xl2 shadow p-4 transform hover:scale-105 hover:shadow-xl transition">
+      <img src="https://via.placeholder.com/300" class="rounded-xl2 mb-3" />
+      <h3 class="font-bold text-lg">Card 3</h3>
+      <p>Some description text.</p>
+    </div>
+  </div>
+
+  <!-- 4) CUSTOM HEIGHT -->
+  <div class="bg-primary text-white flex items-center justify-center h-128 rounded-xl2">
+    Custom Height Section (h-128)
+  </div>
+
+  <!-- 5) BUTTONS -->
+  <div class="flex gap-4">
+    <button class="bg-primary text-white px-6 py-2 rounded-xl2 transform hover:scale-110 active:scale-95 transition">
+      Primary
+    </button>
+    <button class="bg-secondary text-white px-6 py-2 rounded-xl2 transform hover:scale-110 active:scale-95 transition">
+      Secondary
+    </button>
+    <button class="bg-accent text-white px-6 py-2 rounded-xl2 transform hover:scale-110 active:scale-95 transition">
+      Accent
+    </button>
+  </div>
+
+  <!-- 6) OVERLAY IMAGE -->
+  <div class="relative w-80 group">
+    <img src="https://via.placeholder.com/300" class="rounded-xl2" />
+    
+    <div class="absolute inset-0 bg-black bg-opacity-60 rounded-xl2 transition group-hover:bg-opacity-0"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white font-bold text-xl transition">
+      Hello 👋
+    </div>
+  </div>
+
+  <!-- 7) ERROR INPUT -->
+  <div class="max-w-md space-y-2">
+    <input type="text" placeholder="Username"
+      class="w-full p-3 border border-error rounded-xl2 focus:outline-none focus:ring-2 focus:ring-error" />
+    <p class="text-error text-sm">This field is required</p>
+  </div>
+
+  <!-- 8) IMAGE GALLERY -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <img src="https://via.placeholder.com/200"
+      class="filter grayscale hover:grayscale-0 transition duration-500 rounded-xl2" />
+
+    <img src="https://via.placeholder.com/200"
+      class="filter contrast-200 hover:contrast-100 transition duration-500 rounded-xl2" />
+
+    <img src="https://via.placeholder.com/200"
+      class="filter brightness-50 hover:brightness-100 transition duration-500 rounded-xl2" />
+
+    <img src="https://via.placeholder.com/200"
+      class="filter sepia hover:sepia-0 transition duration-500 rounded-xl2" />
+  </div>
+
+</body>
+</html>
